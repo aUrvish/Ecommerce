@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin : 0;
     padding : 0;
     box-sizing : border-box;
+    font-family: cursive;
 }    
 
 html {
@@ -15,9 +16,8 @@ html {
 body {
     height : 100vh;
     width : 100vw;
-    display: grid;
-    place-items: center;
     background-color: ${ ({theme}) => theme.colors.bg };
+    color : ${ ({theme}) => theme.colors.color }
 }
 
 `

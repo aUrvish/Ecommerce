@@ -10,26 +10,20 @@ import ErrorPage from "./ErrorPage";
 import GlobalStyle from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 
+import Header from "./Components/Header"
+
 const App = () => {
 
   const theme = {
     colors : {
-      heading : "black",
-      text : "rgba(29,29,29,.8)",
-      helper : "#8490ff",
-      bg : "#f6f8fa",
-      footer_bg : "#0a1435",
-      btn : "rgb(98 ,84 ,243)",
-      border : "rgba(98 ,84 ,243 ,0.5)",
-      hr : "#fff",
-      gradient : "linear-gradient(0deg , rgb(132 , 144 , 255) 0% , rgb(98 , 189 , 252) 100%)",
-      shadow : "rgba(0,0,0,0.02) 0rem .1rem .3rem 0rem , rgba(27 , 31 , 35 , 0.15) 0rem 0rem 0rem 1rem ",
-      shadowSupport : "rgba(0,0,0,0.16) 0rem .1rem .4rem "
+      bg : "rgb(30, 34, 44)",
+      color : "#2196f3",
+      hover : "#2e6895",
     },
 
     media : {
-      mobile : "76.8rem",
-      tab : "99.8rem",
+      mobile : "768px",
+      tab : "998px",
     },
   }
 
@@ -38,6 +32,7 @@ const App = () => {
         <>
         <BrowserRouter>
           <GlobalStyle />
+          <Header/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
