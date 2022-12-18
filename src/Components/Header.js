@@ -62,10 +62,10 @@ const Header = () => {
                     }
 
                     .logIn_btn {
-                        color: ${({theme}) => theme.colors.bg};
-                        background-color: ${({theme}) => theme.colors.color};
+                        color: ${({theme}) => theme.colors.color};
+                        background-color: ${({theme}) => theme.colors.bg};
                         padding: .2rem 1rem;
-                        border: none;
+                        border: .2rem solid ${({theme}) => theme.colors.color};
                         border-radius: .5rem;
                         cursor: pointer;
                         font-weight: bold;
