@@ -4,15 +4,10 @@ import styled from "styled-components";
 const HeroComponents = (props) => {
 
     const Hero = styled.div`
-        height: 80vh;
-        width: 100%;
-        box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(2,1fr);
 
         .hero_info {
-            height: 100%;
-            width: 100%;
             display:grid;
             place-items: center;
             
@@ -50,7 +45,7 @@ const HeroComponents = (props) => {
             .btn {
                 margin-top: 2rem;
                 color: ${({theme}) => theme.colors.color};
-                background-color: ${({theme}) => theme.colors.bg};
+                background-color: transparent;
                 padding: .6rem 1.8rem;
                 border: none;
                 cursor: pointer;
@@ -93,8 +88,6 @@ const HeroComponents = (props) => {
         }
         
         .hero_image_div {
-            height: 100%;
-            width: 100%;
             display:grid;
             place-items: center;
             
@@ -106,14 +99,10 @@ const HeroComponents = (props) => {
         }
 
         @media (max-width: ${({theme}) => theme.media.mobile}) {
-        
             grid-template-columns: 1fr;
         }
         
         @media (max-width: ${({theme}) => theme.media.tab}) {
-            height: 100%;
-            width: 100%;
-
             .hero_info {
                 div {
                     height: 35rem;

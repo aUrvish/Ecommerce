@@ -19,6 +19,7 @@ const App = () => {
       bg : "rgb(30, 34, 44)",
       color : "#2196f3",
       hover : "#2e6895",
+      shadow : "0 0.5rem 1rem rgba(0, 0, 0, 0.05)",
     },
 
     media : {
