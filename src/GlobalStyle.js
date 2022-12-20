@@ -15,7 +15,7 @@ html {
 
 body {
     height : 100vh;
-    width : 100vw;
+    width : 100%;
     background-color: ${ ({theme}) => theme.colors.bg };
     color : ${ ({theme}) => theme.colors.color }
 }

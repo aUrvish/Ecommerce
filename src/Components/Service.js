@@ -9,19 +9,17 @@ const Services = () => {
     const Ser = styled.div`
         display: grid;
         place-items: center;
-        /* height: 30vh; */
-        /* width: 100vw; */
 
         .main_div {
-            width: 70%;
+            width: 90%;
             height: 100%;
             display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(2,1fr);
+            grid-template-columns: repeat(4,1fr);
             gap: 2rem;
 
 
             .s1 , .s2 , .s3 , .s4 {
+                text-align: center;
                 box-sizing: border-box;
                 padding: 1rem;
                 display:grid;
@@ -29,6 +27,7 @@ const Services = () => {
                 font-size: 1.5rem;
                 border-radius: 1rem;
                 background-color: rgba(255,255,255,.02);
+                color: ${({theme}) => theme.colors.hover};
                 box-shadow: ${({theme}) => theme.colors.shadow};
 
                 .icon {
@@ -36,7 +35,6 @@ const Services = () => {
                 }
 
             }
-
         }
 
         @media (max-width: ${({theme}) => theme.media.mobile}) {
@@ -45,7 +43,6 @@ const Services = () => {
 
                 .s1 , .s2 , .s3 , .s4{
                     padding: 3rem;
-                    text-align: center;
                 } 
             }
         }

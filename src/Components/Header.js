@@ -9,7 +9,10 @@ const Header = () => {
     const [ menuIcon , setMenuIcon ] = useState();
 
     const Header = styled.div`
+        position: fixed;
+        width: 100%;
         padding: .8rem;
+        background-color: ${({theme}) => theme.colors.bg};
 
         .container {
             position: relative;
