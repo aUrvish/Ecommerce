@@ -10,12 +10,13 @@ const Ser = styled.div`
         place-items: center;
         
         .main_div {
-            width: 90%;
+            width: 70%;
             height: 100%;
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            align-items: center;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
             gap: 2rem;
-
 
             .s1 , .s2 , .s3 , .s4 {
                 text-align: center;
@@ -33,6 +34,16 @@ const Ser = styled.div`
                     font-size: 3rem;
                 }
 
+            }
+
+            .s1 {
+                grid-row: 1/3 ;
+                height: 70%;
+            }
+            .s4 {
+                height: 70%;
+                grid-row: 1/3 ;
+                grid-column: 3/4;
             }
         }
 

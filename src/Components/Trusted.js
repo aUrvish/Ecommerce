@@ -15,7 +15,7 @@ const Logo = styled.div`
         }
 
         div {
-            width: 90%;
+            width: 50%;
             display: grid;
             grid-template-columns: repeat(6,1fr);
             place-items: center;

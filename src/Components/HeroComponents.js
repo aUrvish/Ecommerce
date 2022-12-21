@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "./Button";
 
 
 const Hero = styled.div`
@@ -37,53 +38,10 @@ const Hero = styled.div`
             }
 
             .text {
-                margin-top: 1rem;
+                margin: 1.5rem 0;
                 font-size: 1.3rem;
             }
             
-            .btn {
-                margin-top: 2rem;
-                color: ${({theme}) => theme.colors.color};
-                background-color: transparent;
-                padding: .6rem 1.8rem;
-                border: none;
-                cursor: pointer;
-                position: relative;
-                
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    border-top:.25rem solid ${({theme}) => theme.colors.color};
-                    border-left:.25rem solid ${({theme}) => theme.colors.color};
-                    transition: all .2s;
-                }
-                
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    width: 100%;
-                    height: 100%;
-                    border-bottom:.25rem solid ${({theme}) => theme.colors.color};
-                    border-right:.25rem solid ${({theme}) => theme.colors.color};
-                    transition: all .2s;
-                }
-
-                &:hover::before {
-                    height: 20%;
-                    width: 6%;
-                }
-
-                &:hover::after {
-                    height: 20%;
-                    width: 6%;
-                }
-            }
         }
         
         .hero_image_div {
@@ -142,7 +100,7 @@ const HeroComponents = (props) => {
                             <span className="wel">Wellcome To</span>
                             <h1 className="head"> {props.head} </h1>
                             <p className="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus deleniti dolorem tempora. Doloribus repudiandae debitis velit porro.</p>
-                            <button className="btn">Start Now</button>
+                            <Button name="Start Now" to="/products"/>
                         </div>
                     </div>
                 </div>

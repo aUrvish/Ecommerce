@@ -11,6 +11,7 @@ import GlobalStyle from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 
 import Header from "./Components/Header"
+import Footer from "./Components/Footer";
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
       color : "#2196f3",
       hover : "#2e6895",
       shadow : "0 0.5rem 1rem rgba(0, 0, 0, 0.05)",
+      back : "rgba(255,255,255,.02)",
     },
 
     media : {
@@ -43,6 +45,7 @@ const App = () => {
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
     </>
       </ThemeProvider>
