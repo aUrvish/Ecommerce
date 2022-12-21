@@ -4,11 +4,8 @@ import styled from "styled-components";
 import { HiShoppingCart, HiMenu } from "react-icons/hi"
 import { CgClose } from "react-icons/cg"
 
-const Header = () => {
 
-    const [ menuIcon , setMenuIcon ] = useState();
-
-    const Header = styled.div`
+const Head = styled.div`
         position: fixed;
         width: 100%;
         padding: .8rem;
@@ -21,7 +18,7 @@ const Header = () => {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+            
             .logo {
                 height: 3rem;
                 width: 3rem;
@@ -126,11 +123,15 @@ const Header = () => {
             }
         }
         
-    `
+        `;
+
+const Header = () => {
+
+    const [ menuIcon , setMenuIcon ] = useState();
 
     return (
         <>
-            <Header>
+            <Head>
                 <div className="container">
                     <NavLink to={"/"}>
                         <img src="./image/shopping-bag.png" alt="logo" className="logo" />
@@ -166,7 +167,7 @@ const Header = () => {
                     onClick={() =>setMenuIcon(true)} />
 
                 </div>
-            </Header>
+            </Head>
         </>
     )
 }

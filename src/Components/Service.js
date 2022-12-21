@@ -4,12 +4,11 @@ import { MdSecurity } from "react-icons/md";
 import { GiReceiveMoney } from "react-icons/gi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import styled from "styled-components";
-const Services = () => {
 
-    const Ser = styled.div`
+const Ser = styled.div`
         display: grid;
         place-items: center;
-
+        
         .main_div {
             width: 90%;
             height: 100%;
@@ -27,8 +26,8 @@ const Services = () => {
                 font-size: 1.5rem;
                 border-radius: 1rem;
                 background-color: rgba(255,255,255,.02);
-                color: ${({theme}) => theme.colors.hover};
-                box-shadow: ${({theme}) => theme.colors.shadow};
+                color: ${({ theme }) => theme.colors.hover};
+                box-shadow: ${({ theme }) => theme.colors.shadow};
 
                 .icon {
                     font-size: 3rem;
@@ -37,7 +36,7 @@ const Services = () => {
             }
         }
 
-        @media (max-width: ${({theme}) => theme.media.mobile}) {
+        @media (max-width: ${({ theme }) => theme.media.mobile}) {
             .main_div {
                 grid-template-columns: 1fr;
 
@@ -49,6 +48,7 @@ const Services = () => {
 
     `;
 
+const Services = () => {
     return (
         <>
             <Ser>

@@ -3,9 +3,8 @@ import styled from "styled-components"
 import { TfiThemifyLogo } from "react-icons/tfi";
 import { RxDiscordLogo, RxCodesandboxLogo, RxSketchLogo, RxModulzLogo, RxStitchesLogo } from "react-icons/rx";
 
-const Trusted = () => {
 
-    const Logo = styled.div`
+const Logo = styled.div`
         margin-top: 5rem;
         display: grid;
         place-items: center;
@@ -33,6 +32,7 @@ const Trusted = () => {
 
     `
 
+const Trusted = () => {
     return (
         <>
             <Logo>

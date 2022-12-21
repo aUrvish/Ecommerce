@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const HeroComponents = (props) => {
 
-    const Hero = styled.div`
+const Hero = styled.div`
         display: grid;
         grid-template-columns: repeat(2,1fr);
-
+        
         .hero_info {
             display:grid;
             place-items: center;
@@ -14,7 +13,7 @@ const HeroComponents = (props) => {
             div {
                 height: 40rem;
                 width: 40rem;
-
+                
                 .child_div {
                     margin-top: 25%;
                     width: 100%;
@@ -97,7 +96,7 @@ const HeroComponents = (props) => {
                 width: 40rem;
             }
         }
-
+        
         @media (max-width: ${({theme}) => theme.media.mobile}) {
             grid-template-columns: 1fr;
         }
@@ -108,15 +107,15 @@ const HeroComponents = (props) => {
                     height: 35rem;
                     width: 35rem;
                 }
-
+                
                 .wel{
                     font-size: .8rem;
                 }
-
+                
                 .head {
                     font-size: 3rem;
                 }
-
+                
                 .text {
                     font-size: 1.2rem;
                 }
@@ -129,7 +128,10 @@ const HeroComponents = (props) => {
                 }
             }
         }
-    `
+        `
+
+
+const HeroComponents = (props) => {
 
     return (
         <>
