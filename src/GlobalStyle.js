@@ -11,14 +11,22 @@ const GlobalStyle = createGlobalStyle`
 
 html {
     font-size : 62.5%;
+    height : 100%;
 }
 
 body {
-    height : 100vh;
+    height : 100%;
     width : 100%;
     background-color: ${ ({theme}) => theme.colors.bg };
-    color : ${ ({theme}) => theme.colors.color }
+    color : ${ ({theme}) => theme.colors.color };
 }
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 
 `
 
