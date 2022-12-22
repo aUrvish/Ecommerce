@@ -6,7 +6,9 @@ import { CgClose } from "react-icons/cg"
 
 
 const Head = styled.div`
-        position: fixed;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
         width: 100%;
         padding: .8rem;
         background-color: ${({theme}) => theme.colors.bg};

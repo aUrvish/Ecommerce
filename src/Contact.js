@@ -174,15 +174,15 @@ const Contact = () => {
                         <form action="https://formspree.io/f/xpzeadzw" method="POST">
                         <p>Contact Us</p>
                             <div>
-                                <label for="Name">Name : </label>
-                                <input name="Name" type="text" placeholder="Jone Deo" autocomplete="off"/>
+                                <label htmlFor="Name">Name : </label>
+                                <input name="Name" type="text" placeholder="Jone Deo" autoComplete="off"/>
                             </div>
                             <div>
-                                <label for="Email">Email : </label>
-                                <input name="Email" type="email" placeholder="xyz@example.com" autocomplete="off"/>
+                                <label htmlFor="Email">Email : </label>
+                                <input name="Email" type="email" placeholder="xyz@example.com" autoComplete="off"/>
                             </div>
                             <div>
-                                <label for="Message">Massage : </label>
+                                <label htmlFor="Message">Massage : </label>
                                 <textarea rows="7" cols="30" placeholder="Have a nice day!" name="Message"></textarea>
                             </div>
 

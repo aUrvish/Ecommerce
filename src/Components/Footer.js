@@ -18,8 +18,9 @@ const Wrapper = styled.div`
         justify-content: space-between;
         padding: 1.5rem;
         transform: translateY(-50%);
-        background-color: black;
+        background-color: #222630;
         border-radius:.5rem ;
+        border:.1rem solid ${({theme}) => theme.colors.hover};
 
         div {
             font-size: 1.3rem;
@@ -53,6 +54,7 @@ const Wrapper = styled.div`
                 font-size: 1.5rem;
                 text-decoration: none;
                 color: ${({theme}) => theme.colors.hover};
+                margin: .5rem 0;
             }
         }
         
@@ -127,6 +129,7 @@ const Footer = () => {
                         <p>Pages</p>
                         <NavLink to={"/"}>Privacy Policy</NavLink>
                         <NavLink to={"/"}>terms & Conditions</NavLink>
+                        <NavLink to={"*"}>404 Page</NavLink>
                     </div>
                     <div className="footer_company">
                         <p>Company</p>

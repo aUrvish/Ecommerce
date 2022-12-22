@@ -105,7 +105,7 @@ const HeroComponents = (props) => {
                     </div>
                 </div>
                 <div className="hero_image_div">
-                    <img src="./image/hero_img.png" className="hero_img" alt="hero_img" />
+                    <img src="./image/hero_img.png" className="hero_img" alt="hero_img"/>
                 </div>
             </Hero>
         </>
