@@ -15,12 +15,11 @@ const Ser = styled.div`
             display: grid;
             align-items: center;
             grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(2,1fr);
+            /* grid-template-rows: repeat(2,1fr); */
             gap: 2rem;
 
             .s1 , .s2 , .s3 , .s4 {
                 text-align: center;
-                box-sizing: border-box;
                 padding: 1rem;
                 display:grid;
                 place-items: center;
@@ -49,10 +48,12 @@ const Ser = styled.div`
 
         @media (max-width: ${({ theme }) => theme.media.mobile}) {
             .main_div {
-                grid-template-columns: 1fr;
-
+                display: flex;
+                flex-direction: column;
+                
                 .s1 , .s2 , .s3 , .s4{
-                    padding: 3rem;
+                    width: 100%;
+                    padding: 1.5rem;
                 } 
             }
         }

@@ -32,7 +32,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
         <>
-        <BrowserRouter>
+          <BrowserRouter>
           <GlobalStyle />
           <Header/>
           <Routes>

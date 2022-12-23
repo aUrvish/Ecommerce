@@ -99,6 +99,7 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: ${({ theme }) => theme.media.mobile}) {
+        .main_div {
         .get_start {
             width: 90%;
         }
@@ -107,6 +108,7 @@ const Wrapper = styled.div`
             grid-template-columns: 1fr;
             gap: 1.5rem;
         }
+    }
     }
 `
 

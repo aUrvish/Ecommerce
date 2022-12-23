@@ -19,10 +19,8 @@ const UseContext = ({ children }) => {
         try {
             const data = await fetch("https://api.pujakaitem.com/api/products");
             const readData = await data.json()
-            console.log(readData);
             dispatch({type : "API_Product" , payload : readData})
         }catch(error){
-            console.error(error);
             dispatch({type : "API_Error"})
         }
     }
@@ -31,7 +29,6 @@ const UseContext = ({ children }) => {
         getData()
     }, [])
 
-    console.log({...state});
     return (
         <>
             <AppProvider.Provider value={{...state}}>
@@ -41,5 +38,4 @@ const UseContext = ({ children }) => {
     )
 }
 
-// export default UseContext;
 export { AppProvider, UseContext };

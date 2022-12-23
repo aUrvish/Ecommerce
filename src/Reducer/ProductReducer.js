@@ -9,7 +9,7 @@ const ProductReducer = (state , action) =>
             
             case "API_Product" :
 
-            const feture = action.payload.map((item) => item.feture === true);
+            const feture = action.payload.filter((item) => item.featured === true);
 
             return {
                 ...state,
