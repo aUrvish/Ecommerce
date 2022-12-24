@@ -69,7 +69,7 @@ const FetureProduct = () => {
 
                     <div className="text">
                         <p>Our Feature Services</p>
-                        <NavLink to={"/product"}>Show all</NavLink>
+                        <NavLink to={"/products"}>Show all</NavLink>
                     </div>
 
                     <div className="container">

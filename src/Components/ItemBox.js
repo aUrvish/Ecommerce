@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import FormatePrice from "../Helper/FormatePrice";
 
 const Wrapper = styled.div`
     display: grid;
@@ -81,7 +82,7 @@ const ItemBox = (prop) => {
                         </div>
                         <div className="cart_footer">
                             <p className="item_name">{items.name}</p>
-                            <p className="item_price">$ {items.price}</p>
+                            <p className="item_price"> <FormatePrice price={items.price}/></p>
                         </div>
                     </div>
                 </NavLink>
