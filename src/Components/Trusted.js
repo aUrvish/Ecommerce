@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components"
 import { TfiThemifyLogo } from "react-icons/tfi";
 import { RxDiscordLogo, RxCodesandboxLogo, RxSketchLogo, RxModulzLogo, RxStitchesLogo } from "react-icons/rx";
+import Aos from "aos";
 
 
 const Logo = styled.div`
@@ -33,11 +34,17 @@ const Logo = styled.div`
     `
 
 const Trusted = () => {
+
+    Aos.init({
+        offset:150,
+        duration : 1000,
+    })
+
     return (
         <>
             <Logo>
                 <p>Trusted By 1000+ Companies</p>
-                <div>
+                <div data-aos={"zoom-in"}>
                     <TfiThemifyLogo />
                     <RxDiscordLogo />
                     <RxCodesandboxLogo />

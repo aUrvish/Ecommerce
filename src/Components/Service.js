@@ -4,10 +4,12 @@ import { MdSecurity } from "react-icons/md";
 import { GiReceiveMoney } from "react-icons/gi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import styled from "styled-components";
+import Aos from "aos";
 
 const Ser = styled.div`
         display: grid;
         place-items: center;
+        width: 100%;
         
         .main_div {
             width: 70%;
@@ -15,7 +17,7 @@ const Ser = styled.div`
             display: grid;
             align-items: center;
             grid-template-columns: repeat(3,1fr);
-            /* grid-template-rows: repeat(2,1fr); */
+            overflow: hidden;
             gap: 2rem;
 
             .s1 , .s2 , .s3 , .s4 {
@@ -61,23 +63,29 @@ const Ser = styled.div`
     `;
 
 const Services = () => {
+
+    Aos.init({
+        offset: 150,
+        duration : 1000,
+    });
+
     return (
         <>
             <Ser>
                 <div className="main_div">
-                    <div className="s1">
+                    <div className="s1" data-aos={"fade-right"}>
                         <TbTruckDelivery className="icon" />
                         <p>Super Fast and Free Delivery</p>
                     </div>
-                    <div className="s2">
+                    <div className="s2" data-aos={"zoom-in"}>
                         <MdSecurity className="icon" />
                         <p>Non-contact Shipping</p>
                     </div>
-                    <div className="s3">
+                    <div className="s3" data-aos={"zoom-in"}>
                         <GiReceiveMoney className="icon" />
                         <p>Money-back Guaranteed</p>
                     </div>
-                    <div className="s4">
+                    <div className="s4" data-aos={"fade-left"}>
                         <RiSecurePaymentLine className="icon" />
                         <p>Super Secure Payment System</p>
                     </div>

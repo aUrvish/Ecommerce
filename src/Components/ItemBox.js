@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     display: grid;
     place-items: center;
     width: 100%;
-
+    
     .main_div {
         
         .child_div {
@@ -27,12 +27,12 @@ const Wrapper = styled.div`
                 color: ${({ theme }) => theme.colors.bg};
                 transform: translateY(-110%);
             }
-        
+            
             .img{
                 height: 100%;
                 width: 100%;
             }
-
+            
             &::before {
                 content: "";
                 position: absolute;
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
                 transition: all .2s;
             }
             
-
+            
             &:hover:before , &:hover .cat {
                 transform: translateY(0%);
             }
@@ -53,7 +53,7 @@ const Wrapper = styled.div`
         .cart_footer {
             display: flex;
             justify-content: space-between;
-        
+            
             .item_name ,.item_price {
                 margin: .5rem;
                 font-weight: bold;
@@ -73,7 +73,7 @@ const ItemBox = (prop) => {
     return (
         <>
             <Wrapper>
-                <NavLink to={`/singleproduct/${items.id}`}>
+                <NavLink to={`/singleproduct/${items.id}`} style={{textDecoration:"none"}}>
                     <div className="main_div">
                         <div className="child_div">
                             <p className="cat">{items.category}</p>
