@@ -33,8 +33,8 @@ const App = () => {
     <ThemeProvider theme={theme}>
         <>
           <BrowserRouter>
-          <GlobalStyle />
           <Header/>
+          <GlobalStyle />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -42,7 +42,7 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/singleproduct/:id" element={<SingleProduct />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="*" element={<ErrorPage />} />
+            <Route path="*" element={<ErrorPage image="../image/404_img.png" msg="nothing here..." />} />
           </Routes>
           <Footer/>
         </BrowserRouter>

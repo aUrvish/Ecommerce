@@ -69,7 +69,6 @@ const Wrapper = styled.div`
 const ItemBox = (prop) => {
 
     const items = { ...prop.value };
-    console.log(items.name);
 
     return (
         <>

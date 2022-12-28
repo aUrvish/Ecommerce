@@ -7,7 +7,7 @@ const ProductReducer = (state , action) =>
                 isLoading : true ,
             }
             
-            case "API_Product" :
+        case "API_Product" :
 
             const feture = action.payload.filter((item) => item.featured === true);
 
@@ -18,7 +18,7 @@ const ProductReducer = (state , action) =>
                 isLoading : false ,
             }
             
-            case "API_Error":
+        case "API_Error":
                 return {
                     ...state,
                     isError : true ,

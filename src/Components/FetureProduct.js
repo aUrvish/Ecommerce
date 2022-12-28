@@ -51,16 +51,15 @@ const Wrapper = styled.div`
 
 const FetureProduct = () => {
 
-    const data = useContext(AppProvider);
-    // console.log(data)
+    const {stateProduct } = useContext(AppProvider);
 
-    if (data.isLoading === true) {
+    if (stateProduct.isLoading === true) {
         return (
             <>
                 <Loading />
             </>
         )
-    } else if (data.isError) {
+    } else if (stateProduct.isError) {
         return;
     } else {
         return (
@@ -74,9 +73,9 @@ const FetureProduct = () => {
 
                     <div className="container">
                         {
-                            data.feture.map((curr) => {
+                            stateProduct.feture.map((curr , i) => {
                                 return (
-                                    <ItemBox value={{ ...curr }} />
+                                    <ItemBox key={i} value={{ ...curr }} />
                                 )
                             }
                             )
@@ -90,33 +89,3 @@ const FetureProduct = () => {
 }
 
 export default FetureProduct;
-
-// 0
-// :
-// category
-// :
-// "mobile"
-// colors
-// :
-// (3) ['#ff0000', '#000000', '#CDD0D0']
-// company
-// :
-// "apple"
-// description
-// :
-// "The mobile is compact with its 6.2-inch OLED screen and far lighter at 168g. It perfectly captures the design, looks, and feel of the expensive one. It comes with a snapdragon processor with a 5n chip in it. It has a 200mp camera in the rear 100mp in front perfect for selfie lovers. It also support HDR content means you can watch 4K content on it."
-// featured
-// :
-// true
-// id
-// :
-// "thapaserialnoa"
-// image
-// :
-// "https://images.pexels.com/photos/1275229/pexels-photo-1275229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-// name
-// :
-// "iphone x"
-// price
-// :
-// 6000000

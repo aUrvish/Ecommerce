@@ -136,7 +136,7 @@ const Header = () => {
             <Head>
                 <div className="container">
                     <NavLink to={"/"}>
-                        <img src="./image/shopping-bag.png" alt="logo" className="logo" />
+                        <img src="../image/shopping-bag.png" alt="logo" className="logo" />
                     </NavLink>
 
                     <ul className={menuIcon ? "nav show" : "nav unshow"}>

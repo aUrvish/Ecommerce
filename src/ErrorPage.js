@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Button from "./Components/Button";
 
 const Wrapper = styled.div`
+    height: 60vh;
     place-items: center;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -43,16 +44,16 @@ const Wrapper = styled.div`
 
 `
 
-const ErrorPage = () => {
+const ErrorPage = ({image , msg , h , w}) => {
     return(
         <>
             <Wrapper>
                 <div className="e404_image">
-                    <img src="./image/404_img.png" alt="404"/>
+                    <img src={image} alt="404" style={{height:`${h}` , width:`${w}`}}/>
                 </div>
                 <div className="go_back">
                     <div>
-                        <p className="head">Oops, nothing here...</p>
+                        <p className="head">Oops, {msg}</p>
                         <p className="para">Uh oh, we can't seem to find the page you're loocking for, try going back to previous page</p>
                         <Button name="Go Back" to="/"/>
                     </div>
