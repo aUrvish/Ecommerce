@@ -111,9 +111,9 @@ const Product_info = ({ data }) => {
             <p className="color">Color : {<Color data={colors} />} </p>
 
             <div className="btn_div">
-                <button className="btn" onClick={() =>numberOfItem < stock ? setNumberOfItem(numberOfItem + 1) : setNumberOfItem(stock)}>+</button>
-                <p className="num">{numberOfItem}</p>
                 <button className="btn" onClick={() => numberOfItem <= 1 ? setNumberOfItem(1) : setNumberOfItem(numberOfItem - 1)}>-</button>
+                <p className="num">{numberOfItem}</p>
+                <button className="btn" onClick={() =>numberOfItem < stock ? setNumberOfItem(numberOfItem + 1) : setNumberOfItem(stock)}>+</button>
             </div>
 
             <Button name={"Add To Cart"} to={"/cart"}/>

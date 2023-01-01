@@ -65,7 +65,7 @@ const Ser = styled.div`
 const Services = () => {
 
     Aos.init({
-        offset: 150,
+        offset: 100,
         duration : 1000,
     });
 

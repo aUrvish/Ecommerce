@@ -4,14 +4,16 @@ import { NavLink } from "react-router-dom";
 import FormatePrice from "../Helper/FormatePrice";
 
 const Wrapper = styled.div`
-    display: grid;
-    place-items: center;
-    width: 100%;
+    display: flex;
+    justify-content: center; 
     
     .main_div {
-        
+        display: flex;
+        flex-direction: column;
+
         .child_div {
             height : 15rem;
+            width: 22rem;
             position: relative;
             border-radius: 1rem;
             overflow: hidden;
@@ -52,6 +54,7 @@ const Wrapper = styled.div`
         }
 
         .cart_footer {
+            width: 100%;
             display: flex;
             justify-content: space-between;
             

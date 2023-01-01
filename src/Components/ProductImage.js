@@ -44,7 +44,7 @@ const Wrapper = styled.div`
         }
     }
 
-    @media (max-width: ${({theme}) => theme.media.tab}) {
+    @media (max-width: ${({theme}) => theme.media.mobile}) {
         .images{
             div {
                 img {
