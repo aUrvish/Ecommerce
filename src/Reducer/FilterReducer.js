@@ -20,6 +20,44 @@ const FilterReducer = (state , action) => {
                     isFilterError : false,
                     isFilterData : [...action.payload],
             }
+
+            case "SetGridView" :
+                return {
+                    ...state ,
+                    isFilterLoading : false,
+                    isFilterError : false,
+                    grid_views : true ,
+            }
+
+            case "SetListView" :
+                return {
+                    ...state ,
+                    isFilterLoading : false,
+                    isFilterError : false,
+                    grid_views : false ,
+            }
+
+            case "SetPriceFilter" :
+                const value = document.getElementById("short").value;
+                let newShort;
+                
+                if (value === "a-z") {
+                    newShort = action.payload.sort((a,b) => a.name.localeCompare(b.name));
+                }else if (value === "z-a") {
+                    newShort = action.payload.sort((a,b) => b.name.localeCompare(a.name));
+                } else if (value === "lowest") {
+                    newShort = action.payload.sort((a,b) => a.price - b.price);
+                }else if (value === "Highest") {
+                    newShort = action.payload.sort((a,b) => b.price - a.price);
+                }else {
+                    newShort = action.payload;
+                }
+
+                return {
+                    ...state ,
+                    price_filter :value,
+                    isFilterData : [...newShort],
+            }
     
         default:
             return state;

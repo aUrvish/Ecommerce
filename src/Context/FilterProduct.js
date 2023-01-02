@@ -9,13 +9,13 @@ const initState = {
     isFilterError : false ,
     isFilterData : [],
     grid_views : false,
+    price_filter : "",
 }
 
 const FilterProduct  = ({children}) => {
 
     const {stateProduct} = useContext(AppProvider);
     const [filterState , dispatch] = useReducer(reducer , initState);
-    // console.log(stateProduct);
 
     useEffect(() => {
         if (stateProduct.isError) {
@@ -27,15 +27,27 @@ const FilterProduct  = ({children}) => {
         else {
             dispatch({type : "Filter_Data" , payload : stateProduct.product});
         }
+
     } , [stateProduct])
-    
+
+    const set_grid_view = () => {
+        dispatch({type : "SetGridView"})
+    }
+
+    const set_list_view = () => {
+        dispatch({type : "SetListView"})
+    }
+
+    const set_price_filter = () => {
+        dispatch({type : "SetPriceFilter" , payload : stateProduct.product})
+    }
 
 
     return(
-        <FilterProductContext.Provider value={{filterState}}>
+        <FilterProductContext.Provider value={{filterState , set_grid_view , set_list_view , set_price_filter}}>
             {children}
         </FilterProductContext.Provider>
     )
 }
 
-export { FilterProductContext , FilterProduct};
+export { FilterProductContext , FilterProduct };

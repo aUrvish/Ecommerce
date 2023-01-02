@@ -22,6 +22,7 @@ const Wrapper = styled.div`
         .name{
             font-size: 1.8rem;
             padding: .1rem 0;
+            font-weight: bold;
         }
         .price {
             font-size: 1.2rem;
@@ -35,10 +36,21 @@ const Wrapper = styled.div`
             color: ${({theme}) => theme.colors.hover};
         }
     }
+
+    @media (max-width: ${({theme}) => theme.media.mobile }) {
+        grid-template-columns: 1fr ;
+        .image {
+            justify-content: start;
+        }
+        .info {
+            .discrip {
+                width: 100%;
+            }
+        }
+    }
 `
 
 const ListView = ({data}) => {
-    console.log(data);
     return <Wrapper>
         {
             data.map((curr) => {
@@ -50,7 +62,7 @@ const ListView = ({data}) => {
                         <p className="name"> {curr.name} </p>
                         <p className="price"> <FormatePrice price={curr.price}/> </p>
                         <p className="discrip"> {curr.description.slice(0,99)}... </p>
-                        <Button name="Read More" to={`./singleproduct/${curr.id}`}/>
+                        <Button name="Read More" to={`/singleproduct/${curr.id}`}/>
                     </div>
                 </> 
             })
