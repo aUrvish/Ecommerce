@@ -5,6 +5,7 @@ import { FilterProductContext } from "./Context/FilterProduct";
 import ErrorPage from "./ErrorPage";
 import Loading from "./Components/Loading";
 import Filter from "./Components/Filter";
+import ListView from "./Components/ListView";
 
 const Wrapper = styled.div`
     display: grid;
@@ -37,7 +38,11 @@ const Products = () => {
                         <Filter/>
                     </div>
                     <div className="view">
-                        <View data={filterState.isFilterData}/>
+                        {
+                            filterState.grid_views ?
+                                <View data={filterState.isFilterData}/>
+                            :   <ListView data={filterState.isFilterData}/>
+                        }
                     </div>
                 </div>
             </Wrapper>

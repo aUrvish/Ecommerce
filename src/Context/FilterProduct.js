@@ -8,6 +8,7 @@ const initState = {
     isFilterLoading : false ,
     isFilterError : false ,
     isFilterData : [],
+    grid_views : false,
 }
 
 const FilterProduct  = ({children}) => {

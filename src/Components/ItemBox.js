@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import FormatePrice from "../Helper/FormatePrice";
+import ItemBoxImage from "./ItemBoxImage";
 
 const Wrapper = styled.div`
     display: flex;
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
 
-        .child_div {
+        /* .child_div {
             height : 15rem;
             width: 22rem;
             position: relative;
@@ -51,7 +52,7 @@ const Wrapper = styled.div`
                 transform: translateY(0%);
             }
 
-        }
+        } */
 
         .cart_footer {
             width: 100%;
@@ -78,10 +79,11 @@ const ItemBox = (prop) => {
             <Wrapper>
                 <NavLink to={`/singleproduct/${items.id}`} style={{textDecoration:"none"}}>
                     <div className="main_div">
-                        <div className="child_div">
+                        <ItemBoxImage category={items.category} image={items.image} name={items.name}/>
+                        {/* <div className="child_div">
                             <p className="cat">{items.category}</p>
                             <img src={items.image} alt={items.name} className="img" />
-                        </div>
+                        </div> */}
                         <div className="cart_footer">
                             <p className="item_name">{items.name}</p>
                             <p className="item_price"> <FormatePrice price={items.price}/></p>

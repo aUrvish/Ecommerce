@@ -16,13 +16,12 @@ const Wrapper = styled.div`
 
     @media (max-width: ${({theme}) => theme.media.mobile}) {
         .container{
-            grid-template-columns: 1fr; 
+            grid-template-columns: 1fr;
         }
     }
 
 `
 const View = ({data}) => {
-    console.log(data);
     return(
         <Wrapper>
             <div className="container">
