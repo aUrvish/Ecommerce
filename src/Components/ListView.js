@@ -53,8 +53,8 @@ const Wrapper = styled.div`
 const ListView = ({data}) => {
     return <Wrapper>
         {
-            data.map((curr) => {
-                return <>
+            data.map((curr ,index) => {
+                return <React.Fragment key={index}>
                     <div className="image">
                         <ItemBoxImage category={curr.category} image={curr.image} name={curr.name}/>
                     </div>
@@ -64,7 +64,7 @@ const ListView = ({data}) => {
                         <p className="discrip"> {curr.description.slice(0,99)}... </p>
                         <Button name="Read More" to={`/singleproduct/${curr.id}`}/>
                     </div>
-                </> 
+                </React.Fragment> 
             })
         }
     </Wrapper>

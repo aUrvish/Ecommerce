@@ -17,7 +17,9 @@ const App = () => {
   const theme = {
     colors : {
       bg : "rgb(30, 34, 44)",
+      // bg : "#070c19",
       color : "#2196f3",
+      // color : "#24c5f2",
       hover : "#2e6895",
       shadow : "0 0.5rem 1rem rgba(0, 0, 0, 0.05)",
       back : "rgba(255,255,255,.02)",

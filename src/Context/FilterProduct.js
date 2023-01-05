@@ -8,8 +8,16 @@ const initState = {
     isFilterLoading : false ,
     isFilterError : false ,
     isFilterData : [],
+    isallData : [],
     grid_views : false,
     price_filter : "",
+    filter : {
+        text : "",
+        category : "ALL",
+        company : "ALL",
+        colors : "ALL",
+        price : 5000001,
+    },
 }
 
 const FilterProduct  = ({children}) => {
@@ -38,13 +46,19 @@ const FilterProduct  = ({children}) => {
         dispatch({type : "SetListView"})
     }
 
-    const set_price_filter = () => {
-        dispatch({type : "SetPriceFilter" , payload : stateProduct.product})
+    const set_price_filter = (eve) => {
+        dispatch({type : "SetPriceFilter" , payload : eve.target.value})
+    }
+
+    const searchFunc = (eve) => {
+        let name = eve.target.name;
+        let value = eve.target.value;
+        dispatch({type : "SearchFilter" , payload : {name , value}})
     }
 
 
     return(
-        <FilterProductContext.Provider value={{filterState , set_grid_view , set_list_view , set_price_filter}}>
+        <FilterProductContext.Provider value={{filterState , set_grid_view , set_list_view , set_price_filter , searchFunc}}>
             {children}
         </FilterProductContext.Provider>
     )
