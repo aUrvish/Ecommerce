@@ -16,7 +16,6 @@ const Wrapper = styled.div`
 
     .main_div_filter {
         width: 90%;
-        display: grid;
         grid-template-columns: .2fr 1fr;
 
         .filter {
@@ -99,7 +98,7 @@ const Products = () => {
     const {filterState , set_grid_view , set_list_view , set_price_filter} = 
     useContext(FilterProductContext);
 
-    const [filterdiv , setfilterdiv] = useState(false);
+    const [filterdiv , setfilterdiv] = useState(true);
 
     if (filterState.isFilterError) {
         return(
@@ -112,7 +111,7 @@ const Products = () => {
     }else{
         return(
             <Wrapper>
-                <div className="main_div_filter">
+                <div className="main_div_filter" style={{display : filterdiv ? "grid" : "block"}} >
                     <div className="filter" style={{display : filterdiv ? "block" : "none"}}>
                         <AiFillCloseCircle className="closeicon" onClick={() => setfilterdiv(false)} />
                         <Filter/>

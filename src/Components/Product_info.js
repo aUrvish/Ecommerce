@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import FormatePrice from "../Helper/FormatePrice";
 import { AiFillStar , AiOutlineStar } from "react-icons/ai";
 import { BsStarHalf } from "react-icons/bs";
-import Color from "./Color";
+import Color , {colordata} from "./Color";
 import Button from "./Button";
+import {CartsContext} from "../Context/CartContext"
 
 const Wrapper = styled.div`
     padding: 1rem;
@@ -66,6 +67,7 @@ const Wrapper = styled.div`
 `
 
 const Product_info = ({ data }) => {
+    const {getcartData} = useContext(CartsContext);
 
     const [numberOfItem , setNumberOfItem] = useState(1)
 
@@ -77,16 +79,16 @@ const Product_info = ({ data }) => {
 
         if (stars >= index + 1) {
             return (
-                <AiFillStar />
+                <AiFillStar key={index} />
             )
         } else {
             if (stars >= number) {
                 return (
-                    <BsStarHalf />
+                    <BsStarHalf key={index} />
                 )
             } else {
                 return(
-                    <AiOutlineStar/>
+                    <AiOutlineStar key={index}/>
                 )
             }
         }
@@ -116,7 +118,9 @@ const Product_info = ({ data }) => {
                 <button className="btn" onClick={() =>numberOfItem < stock ? setNumberOfItem(numberOfItem + 1) : setNumberOfItem(stock)}>+</button>
             </div>
 
-            <Button name={"Add To Cart"} to={"/cart"}/>
+            <p onClick={() => getcartData(data , colordata , numberOfItem)} >
+                <Button name={"Add To Cart"} to={"/cart"}/>
+            </p>
         </Wrapper>
     )
 }

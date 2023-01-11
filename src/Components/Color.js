@@ -14,17 +14,17 @@ display: flex;
         cursor: pointer;
     }
 `
-
+let colordata;
 const Color = ({data}) => {
-    console.log(data);
 
-    const [color , setcolor] = useState(0)
+    const [color , setcolor] = useState(0);
+    colordata = color;
     return(
         <Wrapper>
             {
                 data.map((curr,index) => {
                     return (
-                        <span style={{backgroundColor : curr}} className={"color_span"} onClick={() => setcolor(index)}> {color === index ? "*" : null} </span>
+                        <span key={index} style={{backgroundColor : curr}} className={"color_span"} onClick={() => setcolor(index)}> {color === index ? "*" : null} </span>
                     )               
                 })
             }
@@ -33,3 +33,4 @@ const Color = ({data}) => {
 }
 
 export default Color;
+export {colordata};
