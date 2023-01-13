@@ -81,7 +81,7 @@ const Services = () => {
                         <MdSecurity className="icon" />
                         <p>Non-contact Shipping</p>
                     </div>
-                    <div className="s3" data-aos={"zoom-in"}>
+                    <div className="s3" data-aos={"zoom-out"}>
                         <GiReceiveMoney className="icon" />
                         <p>Money-back Guaranteed</p>
                     </div>

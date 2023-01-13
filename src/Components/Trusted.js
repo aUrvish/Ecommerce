@@ -44,7 +44,7 @@ const Trusted = () => {
         <>
             <Logo>
                 <p>Trusted By 1000+ Companies</p>
-                <div data-aos={"zoom-in"}>
+                <div data-aos={"zoom-out"}>
                     <TfiThemifyLogo />
                     <RxDiscordLogo />
                     <RxCodesandboxLogo />
